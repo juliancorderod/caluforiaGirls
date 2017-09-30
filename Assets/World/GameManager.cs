@@ -27,7 +27,6 @@ public class GameManager : MonoBehaviour {
     //public GameObject testCube;
 
 
-    public int warpFrameCount = 99;
 
     public bool make = true;
 
@@ -124,14 +123,12 @@ public class GameManager : MonoBehaviour {
 				if (distanceSquared < visibleGridDistance*visibleGridDistance && blocks [i].instantiated == false) {
 					blocks[i].instantiation = squarePool.Retrieve();
 					blocks[i].instantiation.transform.position = blocks[i].location;
-					blocks[i].instantiated = true;
-                    StartCoroutine(WarpIn(blocks[i].instantiation));
+                    blocks[i].instantiated = true;
 
-				}
+                }
 				else if(distanceSquared >= visibleGridDistance*visibleGridDistance&& blocks[i].instantiated == true){
 
-					squarePool.Release(blocks[i].instantiation);
-                    StartCoroutine(WarpOut(blocks[i].instantiation));
+                    squarePool.Release(blocks[i].instantiation);
 					blocks[i].instantiation = null;
 					blocks[i].instantiated = false;
 				}
@@ -153,33 +150,7 @@ public class GameManager : MonoBehaviour {
 		}
 	}
 
-    IEnumerator WarpIn(GameObject incomingTile)
-    {
-        float xzScale = 2 / (warpFrameCount + 1);
-        float yScale = 1 / (warpFrameCount + 1);
 
-        incomingTile.transform.localScale = new Vector3(xzScale, yScale, xzScale);
-
-        for (int i = 0; i < warpFrameCount; i++)
-        {
-            yield return new WaitForEndOfFrame();
-            incomingTile.transform.localScale += new Vector3(xzScale, yScale, xzScale);
-        }
-
-    }
-
-    IEnumerator WarpOut(GameObject outgoingTile)
-    {
-        float xzScale = 2 / (warpFrameCount + 1);
-        float yScale = 1 / (warpFrameCount + 1);
-
-        for (int i = 0; i < warpFrameCount; i++)
-        {
-            yield return new WaitForEndOfFrame();
-            outgoingTile.transform.localScale -= new Vector3(xzScale, yScale, xzScale);
-        }
-
-    }
 }
 
 [System.Serializable]
@@ -212,6 +183,7 @@ public class Pool : MonoBehaviour{
 	private GameObject thingInstance;
 
 
+    public int warpFrameCount = 12;
 
     public Pool(GameObject instance){
 
@@ -240,7 +212,9 @@ public class Pool : MonoBehaviour{
 				usedThings [i] = things[i];
                 usedThings[i].SetActive(true);
 
-				things [i] = null;
+               // StartCoroutine(WarpIn(usedThings[i].gameObject));
+
+                things [i] = null;
 
 				break;
 			}
@@ -251,6 +225,8 @@ public class Pool : MonoBehaviour{
 
 	public void Release(GameObject released){
 
+        //StartCoroutine(WarpOut(released));
+
         released.transform.position = new Vector3(999,999,999);
 
 		Debug.Log ("Releasing square " + released.transform.position);
@@ -260,15 +236,46 @@ public class Pool : MonoBehaviour{
 			if (usedThings [i] == released) {
 
 				things [i] = released;
-                things[i].SetActive(false);
 				usedThings [i] = null;
+                things[i].SetActive(false);
 
                 break;
 			}
 		}
 	}
 
-   
+    IEnumerator WarpIn(GameObject incomingTile)
+    {
+        float xzScale = 2 / (warpFrameCount + 1);
+        float yScale = 1 / (warpFrameCount + 1);
+
+        incomingTile.transform.localScale = new Vector3(xzScale, yScale, xzScale);
+
+        for (int i = 0; i < warpFrameCount; i++)
+        {
+            yield return new WaitForEndOfFrame();
+            incomingTile.transform.localScale += new Vector3(xzScale, yScale, xzScale);
+        }
+
+        yield return null;
+    }
+
+    IEnumerator WarpOut(GameObject outgoingTile)
+    {
+        float xzScale = 2 / (warpFrameCount + 1);
+        float yScale = 1 / (warpFrameCount + 1);
+
+        for (int i = 0; i < warpFrameCount; i++)
+        {
+            yield return new WaitForEndOfFrame();
+            outgoingTile.transform.localScale -= new Vector3(xzScale, yScale, xzScale);
+        }
+
+        yield return null;
+
+    }
+
+
 }
 
 
