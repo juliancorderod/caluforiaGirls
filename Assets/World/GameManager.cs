@@ -214,6 +214,7 @@ public class Pool : MonoBehaviour{
 
 	public void Release(GameObject released){
 
+
 		released.transform.position = new Vector3(999,999,999);
 
 		Debug.Log ("Releasing square " + released.transform.position);
@@ -232,7 +233,4 @@ public class Pool : MonoBehaviour{
 	}
 }
 
-public class Tree{
 
-
-}
