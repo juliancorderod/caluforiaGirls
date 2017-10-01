@@ -19,7 +19,7 @@ public class activateScene : MonoBehaviour {
 	void Update () {
 
         if (tim > timeHeld){
-            Debug.Log(sceneName + "active");
+           
             SceneManager.LoadScene(sceneName);
         }
 
