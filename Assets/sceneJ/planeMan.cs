@@ -9,7 +9,7 @@ public class planeMan : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-        for (int i = 0; i < 20; i++){
+        for (int i = 0; i < 30; i++){
             GameObject g = Instantiate(planePrefab, 
                                        new Vector3(Random.Range(10, 30), Random.Range(0, 5), Random.Range(1005, 1020)), Quaternion.Euler(20,0,0));
         }
