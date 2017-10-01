@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using HoloPlaySDK;
 using UnityEngine;
 
-public class lookAtPlayer : MonoBehaviour {
+namespace HoloPlaySDK_Tests
+{
+	public class lookAtPlayer : MonoBehaviour {
 	//Make sure to subscribe when enabled and unsubscribe to prevent memory leaks
 	void OnEnable()
 	{
@@ -20,4 +22,5 @@ public class lookAtPlayer : MonoBehaviour {
 		transform.localEulerAngles = new Vector3((viewIndex / HoloPlay.Config.numViews) * -40, (viewIndex / HoloPlay.Config.numViews) * 28, 0);
 
 	}
+}
 }
