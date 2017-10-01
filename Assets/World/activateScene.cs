@@ -18,22 +18,24 @@ public class activateScene : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        if (tim >= timeHeld){
+        if (tim > timeHeld){
             Debug.Log(sceneName + "active");
             SceneManager.LoadScene(sceneName);
         }
-            
-        
+
+        Debug.Log(tim);
 		
 	}
 
-    private void OnTriggerEnter(Collider other)
+
+    private void OnTriggerStay(Collider other)
     {
-        tim += Time.deltaTime;
-       
+		tim += Time.deltaTime;
+		Debug.Log("enter");
     }
     private void OnTriggerExit(Collider other)
     {
         tim = 0;
+        Debug.Log("exit");
     }
 }
