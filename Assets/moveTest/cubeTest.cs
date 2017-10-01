@@ -42,7 +42,7 @@ public class cubeTest : MonoBehaviour {
             //	transform.position += new Vector3(0, 0, (posOld.z - posNew.z) * Time.deltaTime * 10);
             r.velocity += new Vector3(0, 0, (posNew.z - posOld.z) * Time.deltaTime * 100);
         else if (r.velocity.z > 0)
-            r.velocity -= new Vector3(0, 0, Time.deltaTime * 15f);
+            r.velocity -= new Vector3(0, 0, Time.deltaTime * 20f);
 
         if (r.velocity.z < 0)
             r.velocity = Vector3.zero;
