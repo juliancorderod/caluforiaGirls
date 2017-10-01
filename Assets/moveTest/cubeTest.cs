@@ -82,6 +82,7 @@ public class cubeTest : MonoBehaviour {
 		{
           
             transform.position = Vector3.MoveTowards(transform.position, new Vector3(transform.position.x, transform.position.y, 995), 0.1f);
+            GetComponent<AudioSource>().enabled = false;
 		}
 	}
 }
