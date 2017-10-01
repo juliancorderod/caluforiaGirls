@@ -19,41 +19,7 @@ public class rotRoom : MonoBehaviour {
 	// Update is called once per frame
 	void Update()
 	{
+        transform.eulerAngles += new Vector3(0, 2.5f * Time.deltaTime, 0);
 
-		if (InputManager.Instance.ThereIsInput())
-		{
-			posNew = InputManager.Instance.GetTouchPosition(0, Space.Self);
-		}
-
-
-		//this is movementstuff
-		if (posOld.z < posNew.z)
-			canMove = true;
-		else
-			canMove = false;
-
-		if (canMove)
-		{
-			v += (posNew.z - posOld.z) * Time.deltaTime * 5;
-
-		}
-		else if (v > 0)
-			v -= Time.deltaTime * 2f;
-
-		if (v < 0)
-			v = 0;
-
-
-		transform.position += transform.forward * v;
-
-
-
-        if(posNew.x > 4){
-            
-        }
-
-
-
-		posOld = posNew;
 	}
 }
