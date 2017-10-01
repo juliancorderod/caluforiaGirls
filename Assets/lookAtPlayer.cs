@@ -19,7 +19,7 @@ namespace HoloPlaySDK_Tests
 
 	void FlipCubeOnView(int viewIndex)
 	{
-		transform.localEulerAngles = new Vector3((viewIndex / HoloPlay.Config.numViews) * -40, (viewIndex / HoloPlay.Config.numViews) * 28, 0);
+			transform.localEulerAngles = new Vector3(-5.38f + (viewIndex / HoloPlay.Config.numViews) * -30, -106.94f + (viewIndex / HoloPlay.Config.numViews) * -40, transform.localEulerAngles.z);
 
 	}
 }
