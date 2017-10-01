@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour {
 	public Transform player;
     //public GameObject testCube;
 
-    public bool make = true;
+    public bool make, notDestroy = true;
 
 	// Use this for initialization
 	void Start () {
@@ -114,23 +114,27 @@ public class GameManager : MonoBehaviour {
 
 		if (make) {
 
-			for (int i = 0; i < blocks.Length; i++) {
+                for (int i = 0; i < blocks.Length; i++)
+                {
 
-				float distanceSquared = Vector3.SqrMagnitude(blocks[i].location-player.transform.position);
+                    float distanceSquared = Vector3.SqrMagnitude(blocks[i].location - player.transform.position);
 
-				if (distanceSquared < visibleGridDistance*visibleGridDistance && blocks [i].instantiated == false) {
-					blocks[i].instantiation = squarePool.Retrieve();
-					blocks[i].instantiation.transform.position = blocks[i].location;
-                    blocks[i].instantiated = true;
+                    if (distanceSquared < visibleGridDistance * visibleGridDistance && blocks[i].instantiated == false)
+                    {
+                        blocks[i].instantiation = squarePool.Retrieve();
+                        blocks[i].instantiation.transform.position = blocks[i].location;
+                        blocks[i].instantiated = true;
 
+                    }
+                    else if (distanceSquared >= visibleGridDistance * visibleGridDistance && blocks[i].instantiated == true)
+                    {
+
+                        squarePool.Release(blocks[i].instantiation);
+                        blocks[i].instantiation = null;
+                        blocks[i].instantiated = false;
+                    }
                 }
-				else if(distanceSquared >= visibleGridDistance*visibleGridDistance&& blocks[i].instantiated == true){
 
-                    squarePool.Release(blocks[i].instantiation);
-					blocks[i].instantiation = null;
-					blocks[i].instantiated = false;
-				}
-			}
 
 			/*
 			for (int i = 0; i < squarePool.usedThings.Length; i++) {
