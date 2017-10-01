@@ -10,8 +10,8 @@ public class planeMan : MonoBehaviour {
 	void Start () {
 
         for (int i = 0; i < 20; i++){
-
-            Instantiate(planePrefab, new Vector3(Random.Range(-10, 10), Random.Range(-10, 10), Random.Range(-10, 10)), Quaternion.Euler(0,0,90));
+            GameObject g = Instantiate(planePrefab, 
+                                       new Vector3(Random.Range(10, 30), Random.Range(0, 5), Random.Range(1005, 1020)), Quaternion.Euler(20,0,0));
         }
 		
 	}
