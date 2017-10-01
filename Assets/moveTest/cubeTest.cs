@@ -70,6 +70,13 @@ public class cubeTest : MonoBehaviour {
                 godStart = true;
                 Debug.Log(godStart);
             }
+          
         }
+
+		if (godStart)
+		{
+          
+            transform.position = Vector3.MoveTowards(transform.position, new Vector3(transform.position.x, transform.position.y, 995), 0.1f);
+		}
 	}
 }
