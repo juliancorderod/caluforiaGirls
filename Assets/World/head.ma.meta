@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 4b402d29671ab4d1981441ee64b739e1
-timeCreated: 1506815104
+guid: 1c459078b9ecc40488ebd636fcbb188d
+timeCreated: 1506882676
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -10,69 +10,42 @@ ModelImporter:
     100004: group2
     100006: group3
     100008: group4
-    100010: head
-    100012: hips
-    100014: joint1
-    100016: leftElbow
-    100018: leftFoot
-    100020: leftHand
-    100022: leftKnee
-    100024: leftShoulder
-    100026: //RootNode
-    100028: pCube1
-    100030: pCylinder1
-    100032: pPlane4
-    100034: pPlane5
-    100036: pPlane6
-    100038: pPlane8
-    100040: rightElbow
-    100042: rightFoot
-    100044: rightHand
-    100046: rightKnee
-    100048: rightShoulder
-    100050: transform1
-    100052: transform2
-    100054: transform3
-    100056: transform4
-    100058: transform5
-    100060: transform6
+    100010: //RootNode
+    100012: pCube1
+    100014: pCylinder1
+    100016: pPlane4
+    100018: pPlane5
+    100020: pPlane6
+    100022: pPlane8
+    100024: transform1
+    100026: transform2
+    100028: transform3
+    100030: transform4
+    100032: transform5
+    100034: transform6
     400000: group
     400002: group1
     400004: group2
     400006: group3
     400008: group4
-    400010: head
-    400012: hips
-    400014: joint1
-    400016: leftElbow
-    400018: leftFoot
-    400020: leftHand
-    400022: leftKnee
-    400024: leftShoulder
-    400026: //RootNode
-    400028: pCube1
-    400030: pCylinder1
-    400032: pPlane4
-    400034: pPlane5
-    400036: pPlane6
-    400038: pPlane8
-    400040: rightElbow
-    400042: rightFoot
-    400044: rightHand
-    400046: rightKnee
-    400048: rightShoulder
-    400050: transform1
-    400052: transform2
-    400054: transform3
-    400056: transform4
-    400058: transform5
-    400060: transform6
+    400010: //RootNode
+    400012: pCube1
+    400014: pCylinder1
+    400016: pPlane4
+    400018: pPlane5
+    400020: pPlane6
+    400022: pPlane8
+    400024: transform1
+    400026: transform2
+    400028: transform3
+    400030: transform4
+    400032: transform5
+    400034: transform6
     2300000: group4
     3300000: group4
     4300000: group4
     7400000: Take 001
     9500000: //RootNode
-    13700000: group4
   materials:
     importMaterials: 1
     materialName: 0

@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 4b402d29671ab4d1981441ee64b739e1
-timeCreated: 1506815104
+guid: e6c2dd6df5603428fb5d0ac206f8dc87
+timeCreated: 1506886055
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -13,12 +13,12 @@ ModelImporter:
     100010: head
     100012: hips
     100014: joint1
-    100016: leftElbow
-    100018: leftFoot
-    100020: leftHand
-    100022: leftKnee
-    100024: leftShoulder
-    100026: //RootNode
+    100016: //RootNode
+    100018: leftElbow
+    100020: leftFoot
+    100022: leftHand
+    100024: leftKnee
+    100026: leftShoulder
     100028: pCube1
     100030: pCylinder1
     100032: pPlane4
@@ -44,12 +44,12 @@ ModelImporter:
     400010: head
     400012: hips
     400014: joint1
-    400016: leftElbow
-    400018: leftFoot
-    400020: leftHand
-    400022: leftKnee
-    400024: leftShoulder
-    400026: //RootNode
+    400016: //RootNode
+    400018: leftElbow
+    400020: leftFoot
+    400022: leftHand
+    400024: leftKnee
+    400026: leftShoulder
     400028: pCube1
     400030: pCylinder1
     400032: pPlane4
@@ -67,8 +67,6 @@ ModelImporter:
     400056: transform4
     400058: transform5
     400060: transform6
-    2300000: group4
-    3300000: group4
     4300000: group4
     7400000: Take 001
     9500000: //RootNode
