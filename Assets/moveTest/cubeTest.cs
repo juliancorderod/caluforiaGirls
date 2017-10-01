@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 using HoloPlaySDK;
+using UnityEngine.SceneManagement;
 
 
 public class cubeTest : MonoBehaviour {
@@ -17,7 +18,7 @@ public class cubeTest : MonoBehaviour {
     Rigidbody r;
 
     float tim = 0;
-    bool godStart = false;
+    public bool godStart = false;
 
 	// Use this for initialization
 	void Start () {
@@ -69,6 +70,10 @@ public class cubeTest : MonoBehaviour {
             {
                 godStart = true;
                 Debug.Log(godStart);
+            }
+            if(tim >25){
+
+                SceneManager.LoadScene("overWorldFinal");
             }
           
         }
