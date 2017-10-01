@@ -18,7 +18,7 @@ public class godEffect : MonoBehaviour {
 
 	void FlipCubeOnView(int viewIndex)
 	{
-		transform.localEulerAngles = new Vector3((viewIndex / HoloPlay.Config.numViews) * 360, 0, 0);
+		transform.localEulerAngles = new Vector3((viewIndex / HoloPlay.Config.numViews) * 360, (viewIndex / HoloPlay.Config.numViews) * 360, (viewIndex / HoloPlay.Config.numViews) * 360);
 
 	}
 }
