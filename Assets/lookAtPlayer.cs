@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class lookAtPlayer : MonoBehaviour {
 	public Animation headTurn;
+	public AnimationClip moveHead;
 	//Make sure to subscribe when enabled and unsubscribe to prevent memory leaks
 	void OnEnable()
 	{
@@ -18,7 +19,7 @@ public class lookAtPlayer : MonoBehaviour {
 
 	void FlipCubeOnView(int viewIndex)
 	{
-		headTurn["HeadAnimation"].normalizedTime = (viewIndex / HoloPlay.Config.numViews);
+		headTurn["finalEastAnim"].normalizedTime = (viewIndex / HoloPlay.Config.numViews);
 		//transform.localEulerAngles = new Vector3((viewIndex / HoloPlay.Config.numViews), (viewIndex / HoloPlay.Config.numViews), 0);
 
 	}
