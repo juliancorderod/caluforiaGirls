@@ -11,7 +11,7 @@ using UnityEngine;
 
 namespace HoloPlaySDK_Tests
 {
-    public class HoloPlayOnViewRenderTest : MonoBehaviour
+    public class RotateFriend: MonoBehaviour
     {
         //Make sure to subscribe when enabled and unsubscribe to prevent memory leaks
         void OnEnable()
@@ -26,7 +26,8 @@ namespace HoloPlaySDK_Tests
 
         void FlipCubeOnView(int viewIndex)
         {
-			transform.localEulerAngles = new Vector3((viewIndex / HoloPlay.Config.numViews) * 45, 0, 0);
+			
+			transform.localEulerAngles = new Vector3(0, ((viewIndex / HoloPlay.Config.numViews) * 45), 0);
 
         }
 

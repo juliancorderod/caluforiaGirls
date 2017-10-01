@@ -26,8 +26,6 @@ public class GameManager : MonoBehaviour {
 	public Transform player;
     //public GameObject testCube;
 
-
-
     public bool make = true;
 
 	// Use this for initialization
@@ -40,7 +38,7 @@ public class GameManager : MonoBehaviour {
 
 		for (int i = 0; i < squares.Length; i++) {
 
-			squares [i] = Instantiate (squareInstance, new Vector3(999,999,999), Quaternion.identity) as GameObject;
+            squares [i] = Instantiate (squareInstance, new Vector3(999,999,999), Quaternion.identity) as GameObject;
 		}
 
 		int xGrid = 0;
