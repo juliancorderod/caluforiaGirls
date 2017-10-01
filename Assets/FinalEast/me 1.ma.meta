@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 4b402d29671ab4d1981441ee64b739e1
-timeCreated: 1506815104
+guid: 986091ba711d648c18cf96cbe06c384f
+timeCreated: 1506883697
 licenseType: Free
 ModelImporter:
   serializedVersion: 19
@@ -67,8 +67,6 @@ ModelImporter:
     400056: transform4
     400058: transform5
     400060: transform6
-    2300000: group4
-    3300000: group4
     4300000: group4
     7400000: Take 001
     9500000: //RootNode
